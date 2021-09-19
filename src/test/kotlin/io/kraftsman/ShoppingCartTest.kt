@@ -31,7 +31,7 @@ class ShoppingCartTest : FunSpec({
             shoppingCart.add(product2)
 
             // Assert
-            shoppingCart.count() shouldBe 200
+            shoppingCart.count() shouldBe 2
         }
     }
 
