@@ -34,5 +34,4 @@ class ShoppingCartTest : FunSpec({
             shoppingCart.count() shouldBe 2
         }
     }
-
 })
