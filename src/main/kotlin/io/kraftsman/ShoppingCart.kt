@@ -1,5 +1,7 @@
 package io.kraftsman
 
+import io.kraftsman.dtos.*
+
 class ShoppingCart {
     private val products = mutableListOf<Product>()
 
