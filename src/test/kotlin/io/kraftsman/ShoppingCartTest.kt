@@ -2,7 +2,7 @@ package io.kraftsman
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
-import io.kraftsman.dtos.*
+import io.kraftsman.dtos.Product
 
 class ShoppingCartTest : FunSpec({
 
