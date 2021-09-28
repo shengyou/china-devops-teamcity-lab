@@ -1,6 +1,7 @@
 package io.kraftsman
 
 import io.kraftsman.dtos.Product
+import kotlin.random.Random
 
 class ShoppingCart {
     private val products = mutableListOf<Product>()
@@ -15,5 +16,13 @@ class ShoppingCart {
 
     fun count(): Int {
         return products.count()
+    }
+
+    fun dummyInt(): Int {
+        return Random.nextInt()
+    }
+
+    fun dummyBoolean(): Boolean {
+        return Random.nextBoolean()
     }
 }
