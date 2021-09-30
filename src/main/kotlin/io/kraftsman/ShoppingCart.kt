@@ -1,7 +1,6 @@
 package io.kraftsman
 
 import io.kraftsman.dtos.Product
-import kotlin.random.Random
 
 /**
  * ShoppingCart class
