@@ -41,22 +41,4 @@ class ShoppingCart {
     fun count(): Int {
         return products.count()
     }
-
-    /**
-     * Dummy integer generator
-     *
-     * @return Random integer
-     */
-    fun dummyInt(): Int {
-        return Random.nextInt()
-    }
-
-    /**
-     * Dummy boolean generator
-     *
-     * @return Random boolean
-     */
-    fun dummyBoolean(): Boolean {
-        return Random.nextBoolean()
-    }
 }
