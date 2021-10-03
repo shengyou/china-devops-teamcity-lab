@@ -7,6 +7,7 @@ plugins {
     id("org.jmailen.kotlinter") version "3.6.0"
     id("io.gitlab.arturbosch.detekt") version "1.18.1"
     id("org.jetbrains.dokka") version "1.5.30"
+    `maven-publish`
 }
 
 group = "io.kraftsman"
