@@ -1,6 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val kotestVersion: String by project
+val spaceUsername: String? by project
+val spacePassword: String? by project
 
 plugins {
     kotlin("jvm") version "1.5.30"
@@ -11,7 +13,7 @@ plugins {
 }
 
 group = "io.kraftsman"
-version = "1.0-SNAPSHOT"
+version = System.getenv("PACKAGE_VERSION") ?: "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -32,4 +34,25 @@ tasks.test {
 
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "11"
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("main") {
+            groupId = project.group.toString()
+            artifactId = project.name
+            version = project.version.toString()
+            from(components["java"])
+        }
+    }
+    repositories {
+        maven {
+            name = "space"
+            url = uri("https://packages.jetbrains.team/maven/p/kotlin-library-for-teamcity/cartpub")
+            credentials {
+                username = spaceUsername ?: System.getenv("SPACE_USERNAME")
+                password = spacePassword ?: System.getenv("SPACE_PASSWORD")
+            }
+        }
+    }
 }
