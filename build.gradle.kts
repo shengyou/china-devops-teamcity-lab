@@ -48,7 +48,7 @@ publishing {
     repositories {
         maven {
             name = "space"
-            url = uri("https://packages.jetbrains.team/maven/p/kotlin-library-for-teamcity/cartpub")
+            url = uri("https://packages.jetbrains.team/maven/p/kotlin-library-for-teamcity/space")
             credentials {
                 username = spaceUsername ?: System.getenv("SPACE_USERNAME")
                 password = spacePassword ?: System.getenv("SPACE_PASSWORD")
