@@ -50,8 +50,12 @@ publishing {
             name = "space"
             url = uri("https://packages.jetbrains.team/maven/p/kotlin-library-for-teamcity/space")
             credentials {
+                println(System.getenv("SPACE_USERNAME"))
+                println(System.getenv("SPACE_PASSWORD"))
                 username = spaceUsername ?: System.getenv("SPACE_USERNAME")
                 password = spacePassword ?: System.getenv("SPACE_PASSWORD")
+                println(username)
+                println(password)
             }
         }
     }
