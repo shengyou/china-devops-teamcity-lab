@@ -6,8 +6,8 @@ import io.kraftsman.dtos.Product
 
 class ShoppingCartTest : FunSpec({
 
-    context("一個購物車") {
-        test("當兩個 100 元商品相加時，總價為 200") {
+    context("购物车") {
+        test("当两个 100 元商品相加时，总价为 200") {
             // Arrange
             val product1 = Product(id = 1, name = "Product 1", price = 100, weight = 10.0)
             val product2 = Product(id = 1, name = "Product 1", price = 100, weight = 10.0)
@@ -21,7 +21,7 @@ class ShoppingCartTest : FunSpec({
             shoppingCart.totalPrice() shouldBe 200
         }
 
-        test("當加了 2 個商品後會回到商品數量為 2") {
+        test("当加了 2 个商品后，返回商品数量为 2") {
             // Arrange
             val product1 = Product(id = 1, name = "Product 1", price = 100, weight = 10.0)
             val product2 = Product(id = 1, name = "Product 1", price = 100, weight = 10.0)

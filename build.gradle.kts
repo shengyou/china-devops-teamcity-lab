@@ -35,28 +35,3 @@ tasks.test {
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "11"
 }
-
-publishing {
-    publications {
-        create<MavenPublication>("main") {
-            groupId = project.group.toString()
-            artifactId = project.name
-            version = project.version.toString()
-            from(components["java"])
-        }
-    }
-    repositories {
-        maven {
-            name = "space"
-            url = uri("https://packages.jetbrains.team/maven/p/kotlin-library-for-teamcity/space")
-            credentials {
-                println(System.getenv("SPACE_USERNAME"))
-                println(System.getenv("SPACE_PASSWORD"))
-                username = spaceUsername ?: System.getenv("SPACE_USERNAME")
-                password = spacePassword ?: System.getenv("SPACE_PASSWORD")
-                println(username)
-                println(password)
-            }
-        }
-    }
-}
