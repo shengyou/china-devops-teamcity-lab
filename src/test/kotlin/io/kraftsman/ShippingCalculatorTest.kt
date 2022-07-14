@@ -12,7 +12,7 @@ class ShippingCalculatorTest : FunSpec({
             val products = mutableListOf(
                 Product(1, "P1", 10, 5.0),
                 Product(2, "P2", 20, 6.0),
-                Product(3, "P3", 30, 7.0),
+                Product(3, "P3", 30, 7.0)
             )
 
             val calculator = ShippingCalculator(products)
